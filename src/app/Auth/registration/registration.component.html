@@ -1,0 +1,28 @@
+<section class="registrationsection">    
+    <div class="formsection">
+        <h3 class="title">Registration Form</h3>
+      <form [formGroup]='registrationDetails' (ngSubmit)='submitdata(registrationDetails.value)'>
+        <label for="username">UserName :</label>
+        <input type="text" formControlName="UserName" placeholder="UserName">
+
+        <label for="country">Country</label>
+        <select formControlName="Country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+    
+        <label for="email">Email Id :</label>
+        <input type="email"  formControlName="email" placeholder="emailId">
+
+        <label for="password">password :</label>
+        <input type="password"  formControlName="password" placeholder="password">
+
+        <label for="Cfm-password">Cfm-password :</label>
+        <input type="password"  formControlName="cfmpassword" placeholder="Cfm-password">
+          
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+</section>
+    

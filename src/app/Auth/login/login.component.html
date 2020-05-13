@@ -1,0 +1,22 @@
+<section class="loginsection">
+    <div class="formsection">
+        <h3 class="title">Login Form</h3>
+        <form [formGroup]="loginDetails" (ngSubmit)="onSubmit(loginDetails.value)">
+            <label for="UserName">UserName/Emailid :</label>
+            <input type="text" id="UserName/emailid" formControlName="mailid" name="UserName/emailid" placeholder="UserName/emailid">
+
+            <label for="password">password</label>
+            <input type="password" id="password" formControlName="password" name="password" placeholder="password">
+
+            <div class="row justify-content-around">
+                <div class="col-md-4 p-0">
+                    <a routerLink="/forgot">Forgotpassword</a>
+                </div>
+                <div class="col-md-4 p-0">
+                    <a routerLink="/reset">Resetpassword</a>
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>
